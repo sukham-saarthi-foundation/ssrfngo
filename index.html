@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sukham Saarthi Foundation</title>
+    <style>
+        *{
+            margin:0px;
+        }
+    #header-text{
+            background: rgb(236,236,236);
+            background: radial-gradient(circle, rgba(255,219,172,1) 41%, rgba(0,249,255,1) 100%);
+            /*font-size:52px;*/
+            font-weight:bold;
+            font-family: Arial;
+            text-align: center;
+            padding:30px;
+            border:none;
+            /*animation*/
+            font-size: 1em; /* Start with a small font size */
+            opacity: 0; /* Start with text hidden */
+            animation: growText 2s forwards; /* Animate text */
+            margin-bottom: -18px;
+            
+        }
+
+        /* Keyframes for Header animation*/
+        @keyframes growText {
+            0% {
+                font-size: 0; /* Start with text size 0 */
+                opacity: 0; /* Start fully transparent */
+            }
+            100% {
+                font-size: 52px; /* Final text size */
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        #b1{
+            height:800px;
+            width:778px;
+            margin-top:-165px;
+            margin-left: -20px;
+            text-align: left;
+        }
+        #b2{
+            height:800px;
+            width:778px;
+            margin-top:-165px;
+            margin-left: -20px;
+            text-align: right;
+        }
+        /*split video background*/
+        #back1{
+            width: 50%; 
+            height: 100px; 
+            float: left;
+            /*position: relative;*/
+        }
+        #back2{
+            margin-left: 50%; 
+            height: 100px; 
+            /*position: relative;*/
+        }
+        /*display box on top of video background*/
+        .centered {
+            position: absolute;
+            top:25%;
+            left:-100%;
+            height:300px;
+            width:1000px;
+            background-color: rgba(255, 252, 153, 0.711);
+            border-radius: 25px;
+            font-size: 20px;
+            text-align: justify;
+            /*animation*/
+            animation: slideIn 3s forwards;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+        
+
+        /* Keyframes for Header animation*/
+        @keyframes slideIn {
+                    from {
+                        left:-100%;
+                        opacity: 0;
+                    }
+                    to {
+                        left:15%;
+                        opacity: 1;
+                    }
+                }
+
+        /*our Story*/
+        #story{
+            background-color:beige;
+            padding:25px;
+            text-align: center;
+            height: 1550px;
+        }
+
+        /*slide in animation for OUR STORY*/
+        
+        .hidden {
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /*Automatic slide show - connect with us*/
+        /* image slideshow */
+        .mySlides {display:none;}
+
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin-left: 398px;
+        }
+
+        /* Caption text */
+        .text {
+        color: White;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: none;
+        transition: background-color 0.6s ease;
+        }
+
+        .active {
+        background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+        animation-name: fade;
+        animation-duration: 2.5s;
+        }
+
+        @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+        }
+    </style>
+</head>
+<body>
+    <!-- Header-->
+    <div id="header-text">
+        Sukham Saarthi Foundation
+    </div>
+
+    <!-- Background video & intro-->
+    <div style="width: 100%;margin-top:-5px;">
+        <div id="back1"> 
+            <video autoplay muted loop id="b1">
+                <source src="background_2.mp4" type="video/mp4">
+            </video> 
+        </div>
+        <div id="back2"> 
+            <video autoplay muted loop id="b2">
+                <source src="background_1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="centered">
+            <p style="text-align: center;font-size: 42px;margin-top: 5px;margin-bottom: 50px;"><b>Welcome</b></p>
+            <p style="font-size: 22px;padding:8px;margin-top:-40px;">
+                The Sukham Saarthi Foundation is a non-profit organization based in Vadodara, Gujarat, established on August 8, 2023. It focuses on a 
+                variety of social issues including health and family welfare, children's education and literacy, human rights, labor and employment, 
+                and women's development and empowerment. The foundation operates as a private sector company under the Companies Act, 2013.<br>
+                <br>
+                The foundation provides healthcare services, educational support, legal aid for human rights protection, employment training programs, 
+                and initiatives to empower women. Key management personnel include Chairman Param Saraswat, Treasurer Kalrav Thakkar, and Secretary Anshul Mathur​.
+            </p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    
+    <div id="animate-container">
+        <!-- Our Story Section Start-->
+    <div id="story">
+    <h1 class="hidden" style="font-size: 52px;"><b>Our Story</b></h1>
+    <br><br>
+    <p class="hidden" style="font-size: 28px;">Making an impact</p><br><br>
+    <div style="width:100%;">
+        <div style="width:50%;height:200px;float:left;">
+            <h1 class="hidden" style="font-size: 52px;margin-left:-10px;"><b>OUR MISSION</b></h1>
+            <p class="hidden" style="font-size: 22px;padding:8px;text-align: justify;margin:60px;margin-top:10px;">Here at Sukham Saarthi Foundation, we are committed to creating positive change in the world. 
+                Since our establishment in 2000, we have been actively involved in empowering individuals and communities. 
+                Through building meaningful relationships, we aim to bring about a significant and lasting impact. 
+                Are you ready to join us in making a real difference in the lives of many?</p>
+
+                <img class="hidden" src="family" height="300px;" width="420px" style="border-radius: 25px;">
+        </div>
+        <div class="hidden" style="width:50%;height:200px;margin-left: 50%;">
+            <img class="hidden" src="helping hand.jpg" height="450px;" width="600px" style="border-radius: 25px;">
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br>
+        <p class="hidden" style="font-size: 22px;text-align: justify;margin-left: 400px;margin-right: 400px;">
+            Here at Sukham Saarthi Foundation, we are dedicated to fostering positive change in society.
+             With a history dating back to 2000, we have been actively engaged in initiatives that uplift individuals 
+             and communities. By cultivating impactful partnerships, we aspire to create a meaningful and 
+             enduring change. Are you prepared to join us on this transformative journey?
+        </p>
+    </div>
+    <div>
+        <br><br>
+    <video class="hidden" autoplay muted loop width="850" height="500">
+        <source src="story video 1.mp4" type="video/mp4">
+    </video>
+    </div>
+</div>
+<!-- Our Story Section End-->
+
+<!-- Our Initiatives Section Start-->
+<div style="background-color: rgb(185, 185, 185);">
+    <h1 class="hidden" style="font-size: 52px;text-align: center;padding-top: 20px;"><b>Our Initiatives</b></h1>
+    <br><br>
+    <p class="hidden" style="font-size: 28px;text-align: center;">Impactful Programs</p><br><br>
+    <span style="margin-left: 50px;"><img class="hidden" src="blood donation.jpg" width="350px" height="400px" style="border-radius: 200px 200px 0px 0px;"></span>
+
+    <span style="margin-left: 160px;"><img class="hidden" src="volunteer" width="350px" height="400px" style="border-radius: 200px 200px 0px 0px;"></span>
+
+    <span style="margin-left: 170px;"><img class="hidden"src="nature.jpg" width="350px" height="400px" style="border-radius: 200px 200px 0px 0px;"></span>
+
+    <br><br>
+    
+    <p class="hidden" style="font-size: 26px;font-weight: bold;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Blood Donation Drives
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Volunteer Opportunities  
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Environmental Conservation</p>
+    <br><br><br>
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+    <span style="margin-left: 50px;"><img class="hidden" src="education.jpg" width="350px" height="400px" style="border-radius: 200px 200px 0px 0px;"></span>
+
+    <span style="margin-left: 160px;"><img class="hidden" src="health.jpg" width="350px" height="400px" style="border-radius: 200px 200px 0px 0px;"></span>
+
+    <span style="margin-left: 140px;"><img class="hidden" src="elderly.jpg" width="420px" height="400px" style="border-radius: 200px 200px 0px 0px;"></span>
+
+    <br><br>
+    
+    <p class="hidden" style="font-size: 26px;font-weight: bold;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sustainable Growth
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Community Camps 
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;Care For Elderly</p>
+    <br><br><br>
+</div>
+
+<!-- Our Initiatives Section Start-->
+
+<!-- Connect With Us section Start-->
+<div style="background-color:beige;">
+    <h1 style="font-size: 52px;text-align: center;padding-top: 20px;"><b>Connect With Us</b></h1>
+    <br><br>
+    <!-- Slidshow -->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="connect4.avif" style="width:700px;height:500px;border-radius:30px;">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="education.jpg" style="width:700px;height:500px;border-radius:30px;">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="connect1.jpg" style="width:700px;height:500px;border-radius:30px;">
+      <div class="text"></div>
+    </div>
+
+    
+    <div class="mySlides fade">
+      <img src="connect5.jpg" style="width:700px;height:500px;border-radius:30px;">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="connect2.jpg" style="width:700px;height:500px;border-radius:30px;">
+        <div class="text"></div>
+      </div>
+    
+    
+    <div class="mySlides fade">
+      <img src="health.jpg" style="width:700px;height:500px;border-radius:30px;">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="connect3.jpg" style="width:700px;height:500px;border-radius:30px;">
+        <div class="text"></div>
+      </div>
+    
+    </div>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>  
+       
+    </div>
+    <br><br><br>
+</div>
+<!-- Connect With Us section End-->
+</div><!-- animate- container-->
+
+<!-- footer start-->
+<div style="background-color: rgb(185, 185, 185);">
+    <h1 style="font-size: 42px;text-align: center;padding-top: 20px;"><b>Sukham Saarthi Foundation</b></h1><br><br><br>
+    <div style="width: 100%;text-align: center;">
+        <div style="width: 50%; height: 100px; float: left;">
+            <h3>param.saraswat@gmail.com</h3>
+        </div>
+
+        <div style=" margin-left: 50%;height: 100px; ">
+            <h3>K-901 Samsara Luxury Appartment<br> Chhani Rd Vadodara Gujarat 390024</h3>
+        </div>
+    </div>
+</div>
+<!-- footer end-->
+
+
+     
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("animate-container");
+    const elements = container.querySelectorAll(".hidden");
+
+    function checkPosition() {
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((element) => {
+            const positionFromTop = element.getBoundingClientRect().top;
+
+            if (positionFromTop - windowHeight <= 0) {
+                element.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkPosition);
+    window.addEventListener("resize", checkPosition);
+    checkPosition(); // Initial check on load
+});
+ </script>   
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+    </script>
+    
+</body>
+</html>
